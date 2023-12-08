@@ -13,7 +13,7 @@ ApplicationWindow {
     property date date
     property string ttimeText: "00:00"
     property string hourText: "22:00"
-    property real originalFontSizeHourly: 52 // Adjust the original font size as needed
+    property real originalFontSizeHourly: 48 // Adjust the original font size as needed
     property real dynamicFontSizeHour: Math.max(Math.min((window.width / 1920), (window.height / 1080)) * originalFontSizeHourly, 1)
     property real originalFontSizeTemp: 82 // Adjust the original font size as needed
     property real dynamicFontSizeTemp: Math.max(Math.min((window.width / 1920), (window.height / 1080)) * originalFontSizeTemp, 1)
@@ -63,7 +63,7 @@ ApplicationWindow {
         width: window.width * 0.194270833
         height: window.height * 0.353703704
         color: "#ffffff"
-        property real originalFontSize: 280
+        property real originalFontSize: 270
         property string tempText: "22"
         property real dynamicFontSize: Math.max((window.height / 1080) * originalFontSize, 1)
         font.pixelSize: temp.dynamicFontSize        
@@ -83,13 +83,12 @@ ApplicationWindow {
 
     Image {
         id: celcius
+        y: 68
         width: window.width * 0.090625
         height: window.height * 0.144444444
         anchors.left: parent.left
-        anchors.top: parent.top
         source: "./icon/celsius.png"
-        anchors.leftMargin: window.height * 0.62962963
-        anchors.topMargin: window.width * 0.0104166667
+        anchors.leftMargin: window.width * 0.3484375
         fillMode: Image.PreserveAspectFit
     }
 
@@ -163,7 +162,7 @@ ApplicationWindow {
                 height: 200
                 opacity: 0.7
                 color: "#ffffff"
-                radius: 20
+                radius: 10
                 Layout.fillHeight: true
                 Layout.fillWidth: true
 
@@ -219,7 +218,7 @@ ApplicationWindow {
                 height: 200
                 opacity: 0.7
                 color: "#ffffff"
-                radius: 20
+                radius: 10
                 objectName: "hourly_2"
                 Text {
                     id: hourlyText1
@@ -275,7 +274,7 @@ ApplicationWindow {
                 height: 200
                 opacity: 0.7
                 color: "#ffffff"
-                radius: 20
+                radius: 10
                 objectName: "hourly_3"
                 Text {
                     id: hourlyText2
@@ -331,7 +330,7 @@ ApplicationWindow {
                 height: 200
                 opacity: 0.7
                 color: "#ffffff"
-                radius: 20
+                radius: 10
                 objectName: "hourly_4"
                 Text {
                     id: hourlyText3
@@ -387,7 +386,7 @@ ApplicationWindow {
                 height: 200
                 opacity: 0.7
                 color: "#ffffff"
-                radius: 20
+                radius: 10
                 objectName: "hourly_5"
                 Text {
                     id: hourlyText4
@@ -443,7 +442,7 @@ ApplicationWindow {
                 height: 200
                 opacity: 0.7
                 color: "#ffffff"
-                radius: 20
+                radius: 10
                 objectName: "hourly_6"
                 Text {
                     id: hourlyText5
@@ -499,7 +498,7 @@ ApplicationWindow {
                 height: 200
                 opacity: 0.7
                 color: "#ffffff"
-                radius: 20
+                radius: 10
                 objectName: "hourly_7"
                 Text {
                     id: hourlyText6
@@ -555,7 +554,7 @@ ApplicationWindow {
                 height: 200
                 opacity: 0.7
                 color: "#ffffff"
-                radius: 20
+                radius: 10
                 objectName: "hourly_8"
                 Text {
                     id: hourlyText7
@@ -611,7 +610,7 @@ ApplicationWindow {
                 height: 200
                 opacity: 0.7
                 color: "#ffffff"
-                radius: 20
+                radius: 10
                 objectName: "hourly_9"
                 Text {
                     id: hourlyText8
@@ -667,7 +666,7 @@ ApplicationWindow {
                 height: 200
                 opacity: 0.7
                 color: "#ffffff"
-                radius: 20
+                radius: 10
                 objectName: "hourly_10"
                 Text {
                     id: hourlyText9
@@ -723,7 +722,7 @@ ApplicationWindow {
                 height: 200
                 opacity: 0.7
                 color: "#ffffff"
-                radius: 20
+                radius: 10
                 objectName: "hourly_11"
                 Text {
                     id: hourlyText10
@@ -779,7 +778,7 @@ ApplicationWindow {
                 height: 200
                 opacity: 0.7
                 color: "#ffffff"
-                radius: 20
+                radius: 10
                 objectName: "hourly_12"
                 Text {
                     id: hourlyText11
@@ -846,7 +845,7 @@ ApplicationWindow {
                 height: 200
                 opacity: 0.7
                 color: "#ffffff"
-                radius: 20
+                radius: 10
                 Text {
                     id: dailyText_1
                     objectName: "dailyText"
@@ -946,7 +945,7 @@ ApplicationWindow {
                 height: 200
                 opacity: 0.7
                 color: "#ffffff"
-                radius: 20
+                radius: 10
                 objectName: "daily_2"
                 Text {
                     id: dailyText_2
@@ -1047,7 +1046,7 @@ ApplicationWindow {
                 height: 200
                 opacity: 0.7
                 color: "#ffffff"
-                radius: 20
+                radius: 10
                 objectName: "daily_3"
                 Text {
                     id: dailyText_3
@@ -1148,7 +1147,7 @@ ApplicationWindow {
                 height: 200
                 opacity: 0.7
                 color: "#ffffff"
-                radius: 20
+                radius: 10
                 objectName: "daily_4"
                 Text {
                     id: dailyText_4
@@ -1249,7 +1248,7 @@ ApplicationWindow {
                 height: 200
                 opacity: 0.7
                 color: "#ffffff"
-                radius: 20
+                radius: 10
                 objectName: "daily_5"
                 Text {
                     id: dailyText_5
@@ -1350,7 +1349,7 @@ ApplicationWindow {
                 height: 200
                 opacity: 0.7
                 color: "#ffffff"
-                radius: 20
+                radius: 10
                 objectName: "daily_6"
                 Text {
                     id: dailyText_6
@@ -1451,7 +1450,7 @@ ApplicationWindow {
                 height: 200
                 opacity: 0.7
                 color: "#ffffff"
-                radius: 20
+                radius: 10
                 objectName: "daily_7"
                 Text {
                     id: dailyText_7
