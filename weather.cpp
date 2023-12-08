@@ -130,7 +130,7 @@ int main(int argc, char *argv[])
 
         QObject *mainIcon = engine.rootObjects().first()->findChild<QObject*>("mainIcon");
         if (mainIcon) {
-            mainIcon->setProperty("source", "file://home/barryallen/weather/icon/" + currentCondition.iconName + ".png");
+            mainIcon->setProperty("source", "file:icon/" + currentCondition.iconName + ".png");
         }
 
         // After processing selectedData
@@ -148,7 +148,7 @@ int main(int argc, char *argv[])
                 QString iconObjectName = QString("hourlyIcon").arg(dayObjectName);
                 QObject *iconObject = dayObject->findChild<QObject*>(iconObjectName);
                 if (iconObject) {
-                    QString iconSource = "file://home/barryallen/weather/icon/" + getWeatherCondition(entry.value("wx").toString().toInt(), entry.value("dayOrNight").toString()).iconName + ".png";
+                    QString iconSource = "file:icon/" + getWeatherCondition(entry.value("wx").toString().toInt(), entry.value("dayOrNight").toString()).iconName + ".png";
                     iconObject->setProperty("source", iconSource);
                 }
 
@@ -190,13 +190,13 @@ int main(int argc, char *argv[])
                 QString iconObjectName_1 = QString("dailyIcon_1").arg(dayObjectName);
                 QObject *iconObject_1 = dayObject->findChild<QObject*>(iconObjectName_1);
                 if (iconObject_1) {
-                    QString iconSource = "file://home/barryallen/weather/icon/" + getWeatherCondition(entry.value("wx_am").toString().toInt(), "D").iconName + ".png";
+                    QString iconSource = "file:icon/" + getWeatherCondition(entry.value("wx_am").toString().toInt(), "D").iconName + ".png";
                     iconObject_1->setProperty("source", iconSource);
                 }
                 QString iconObjectName_2 = QString("dailyIcon_2").arg(dayObjectName);
                 QObject *iconObject_2 = dayObject->findChild<QObject*>(iconObjectName_2);
                 if (iconObject_2) {
-                    QString iconSource = "file://home/barryallen/weather/icon/" + getWeatherCondition(entry.value("wx_pm").toString().toInt(), "N").iconName + ".png";
+                    QString iconSource = "file:icon/" + getWeatherCondition(entry.value("wx_pm").toString().toInt(), "N").iconName + ".png";
                     iconObject_2->setProperty("source", iconSource);
                 }
 
