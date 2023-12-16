@@ -6,11 +6,7 @@ TEMPLATE = app
 TARGET = weather
 INCLUDEPATH += .
 
-QT += widgets
-QT += qml quick
-QT += network
-QT += core
-QT += gui
+QT += core gui widgets qml quick network multimedia svg
 
 CONFIG += c++11
 # Input 
